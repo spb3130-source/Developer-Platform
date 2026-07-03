@@ -1,0 +1,66 @@
+Power Shell Setup commands
+
+Power shell version it should be 7: $PSVersionTable.PSVersion
+if not than : winget install Microsoft.PowerShell
+Verify : $PSVersionTable
+winget install --id Git.Git -e
+git --version
+git config --global user.name "Your Name"
+git config --global user.name "Prince"
+git config --global user.email "your-email@example.com"
+git config --global pull.rebase false
+git config --global core.autocrlf true
+git config --global core.editor "code --wait"
+git config --list
+git config --global --unset-all init.defaultBranch
+git config --global init.defaultBranch main
+git config --global --get init.defaultBranch
+
+winget install Microsoft.VisualStudioCode
+code --version
+save Settings.json in VS code
+winget --version
+run install-vscode-extensions.ps1 file
+Install Python in C:\Python313, custom install
+python --version
+py --version
+pip --version
+winget install --id=astral-sh.uv -e
+uv --version
+winget install Casey.Just
+just --version
+winget install DBBrowserForSQLite.DBBrowserForSQLite
+winget install DBeaver.DBeaver.Community
+winget install OpenJS.NodeJS.LTS
+
+New-Item -ItemType Directory -Force E:\Developer\Projects
+New-Item -ItemType Directory -Force E:\Developer\Templates
+New-Item -ItemType Directory -Force E:\Developer\Setup
+New-Item -ItemType Directory -Force E:\Developer\Scripts
+New-Item -ItemType Directory -Force E:\Developer\Documentation
+New-Item -ItemType Directory -Force E:\Developer\Backup
+New-Item -ItemType Directory -Force E:\Developer\Downloads
+New-Item -ItemType Directory -Force E:\Developer\Tools
+
+npm install -g pnpm
+npm install -g playwright
+winget install GitHub.cli
+winget install Schniz.fnm
+
+creation of Ssh key
+ssh-keygen -t ed25519 -C "spb3130@gmail.com"
+Set-Service -Name ssh-agent -StartupType Automatic
+Start-Service ssh-agent
+Get-Service ssh-agent
+
+to remove key
+Remove-Item ~/.ssh/id_ed25519
+Remove-Item ~/.ssh/id_ed25519.pub
+generate a new key
+ssh-keygen -t ed25519 -a 100 -C "spb3130@gmail.com"
+ssh-add ~/.ssh/id_ed25519
+ssh-add -l
+Get-Content ~/.ssh/id_ed25519.pub
+ssh -T git@github.com
+gh auth status
+
