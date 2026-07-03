@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+
+# Build
+dist/
+build/
+*.egg-info/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# VS Code
+.vscode/settings.local.json
+
+# Logs
+logs/
+*.log
+
+# SQLite
+*.db
+*.sqlite3
+
+# OS
+Thumbs.db
+Desktop.ini
+
+# Temporary
+*.tmp
+*.bak
