@@ -1,0 +1,33 @@
+{
+    "project": {
+        "name": "Developer Platform",
+        "version": "0.2.0"
+    },
+
+    "tools": [
+        {
+            "name": "Git",
+            "command": "git"
+        },
+        {
+            "name": "Python",
+            "command": "python"
+        },
+        {
+            "name": "Node.js",
+            "command": "node"
+        },
+        {
+            "name": "VS Code",
+            "command": "code"
+        },
+        {
+            "name": "uv",
+            "command": "uv"
+        },
+        {
+            "name": "pnpm",
+            "command": "pnpm"
+        }
+    ]
+}
