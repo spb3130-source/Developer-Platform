@@ -1,5 +1,6 @@
-from config import load_config
 from PySide6.QtWidgets import QMainWindow
+
+from app_config import load_config
 
 
 class MainWindow(QMainWindow):
