@@ -1,12 +1,10 @@
 import sys
 
-from application import Application
+from app.application import Application
 
 
-def main():
-
+def main() -> None:
     application = Application()
-
     sys.exit(application.run())
 
 

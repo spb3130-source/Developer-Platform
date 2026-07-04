@@ -1,6 +1,6 @@
 from PySide6.QtWidgets import QMainWindow
 
-from app_config import load_config
+from app.app_config import load_config
 
 
 class MainWindow(QMainWindow):

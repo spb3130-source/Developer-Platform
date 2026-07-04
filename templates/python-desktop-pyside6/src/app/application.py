@@ -2,8 +2,8 @@ import sys
 
 from PySide6.QtWidgets import QApplication
 
-from logger import app_logger
-from views.main_window import MainWindow
+from app.logger import app_logger
+from app.views.main_window import MainWindow
 
 
 class Application:
@@ -16,5 +16,5 @@ class Application:
 
     def run(self) -> int:
         self.main_window.show()
-        return self.qt_app.exec()
         app_logger.info("Application running...")
+        return self.qt_app.exec()
