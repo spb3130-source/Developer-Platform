@@ -56,3 +56,10 @@ function Invoke-Step {
     }
 
 }
+
+function Get-BootstrapConfig {
+
+    return Get-Content "$PSScriptRoot\..\config\bootstrap.json" |
+        ConvertFrom-Json
+
+}
