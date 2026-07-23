@@ -20,11 +20,43 @@ function Invoke-Setup {
 
     Invoke-SetupStep "Framework Validation" {
 
-    Write-Success "Setup pipeline ready."
+        Write-Success "Setup pipeline ready."
+
+    }
+
+    Invoke-SetupStep "Winget" {
+
+        Install-Winget
+
+        Configure-Winget
+
+    }
+
+    Invoke-SetupStep "Git" {
+
+        Install-Git
+
+        [void](Verify-Git)
+
+        Configure-Git
+
+        Test-GitWorkflow
+
+    }
+
+    Invoke-SetupStep "GitHub CLI" {
+
+        Install-GitHubCLI
+
+        [void](Verify-GitHubCLI)
+
+        Configure-GitHubCLI
+
+        Test-GitHubCLI
+
     }
 
 }
-
 
 function Complete-Setup {
 
@@ -43,9 +75,13 @@ function Invoke-SetupStep {
 
     try {
 
+        $stopwatch = [System.Diagnostics.Stopwatch]::StartNew()
+
         & $Action
 
-        Write-Success "$Name completed."
+        $stopwatch.Stop()
+
+        Write-Success "$Name completed in $($stopwatch.Elapsed.TotalSeconds.ToString('0.00')) sec."
 
     }
     catch {
