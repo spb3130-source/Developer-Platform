@@ -39,3 +39,6 @@ Desktop.ini
 .mypy_cache/
 .ruff_cache/
 audit/
+
+# Generated setup reports
+/bootstrap/reports/
